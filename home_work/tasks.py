@@ -66,9 +66,10 @@ list_4 = ['разработка', 'администрирование', 'protoco
 
 
 def list_encode_decode(data):
-    def list_encode(elem):
-        return str(elem).encode('utf-8')
-    encoded_list = (list(map(list_encode, data)))
+    # def list_encode(elem):
+    #     return str(elem).encode('utf-8')
+    # encoded_list = (list(map(list_encode, data)))
+    encoded_list = [(lambda el: str(el).encode('utf-8'))(el) for el in data]
 
     def list_decode(elem):
         return elem.decode('utf-8')
