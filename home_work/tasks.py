@@ -20,7 +20,7 @@ def string_checker(str_1, str_2):
     print(strings_dict)
 
 
-string_checker(strings_list, strings_list_unicode)
+# string_checker(strings_list, strings_list_unicode)
 
 
 """
@@ -28,12 +28,35 @@ string_checker(strings_list, strings_list_unicode)
 ручном режиме, с помощью добавления литеры b к текстовому значению, (т.е. ни в коем случае не используя методы encode, 
 decode или функцию bytes) и определить тип, содержимое и длину соответствующих переменных.
 """
+list_2 = ['t_class', 't_function', 't_method']
 
+
+def str_to_bytes(*args):
+    data = ['class', 'function', 'method'] if not args else list(args[0])
+    for el in data:
+        el = eval("b" + "'" + el + "'")
+        print(el, type(el), len(el))
+
+
+# str_to_bytes(list_2)
 
 """
 3. Определить, какие из слов «attribute», «класс», «функция», «type» невозможно записать в байтовом типе. 
 Важно: решение должно быть универсальным, т.е. не зависеть от того, какие конкретно слова мы исследуем.
 """
+
+
+def check_str_to_bytes(*args):
+    data = ['attribute', 'класс', 'функция', 'type'] if not args else list(args)
+    for el in data:
+        try:
+            el = eval("b" + "'" + el + "'")
+            print(el, type(el), len(el))
+        except SyntaxError:
+            print(f'"{el}" - is not in ASCII. Use .encode()')
+
+
+# check_str_to_bytes()
 
 
 """
