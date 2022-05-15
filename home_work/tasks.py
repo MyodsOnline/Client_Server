@@ -86,6 +86,26 @@ def list_encode_decode(data):
 5. Написать код, который выполняет пинг веб-ресурсов yandex.ru, youtube.com и преобразовывает результат из байтовового 
 типа данных в строковый без ошибок для любой кодировки операционной системы.
 """
+import subprocess
+import platform
+import locale
+
+hosts = ['yandex.ru', 'google.com']
+
+
+def ping_func(hosts):
+    for host in hosts:
+        param = '-n' if platform.system().lower() == 'windows' else '-c'
+        args = ['ping', param, '2', host]
+        process = subprocess.Popen(args, stdout=subprocess.PIPE)
+        default_encoding = locale.getpreferredencoding()
+        for line in process.stdout:
+            result = locale.getpreferredencoding(line)
+            print('result = ', result)
+            print(line.decode(default_encoding))
+
+
+ping_func(hosts)
 
 """
 6. Создать текстовый файл test_file.txt, заполнить его тремя строками: «сетевое программирование», «сокет», 
