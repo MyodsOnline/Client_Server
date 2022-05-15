@@ -105,10 +105,34 @@ def ping_func(hosts):
             print(line.decode(default_encoding))
 
 
-ping_func(hosts)
+# ping_func(hosts)
 
 """
 6. Создать текстовый файл test_file.txt, заполнить его тремя строками: «сетевое программирование», «сокет», 
 «декоратор». Далее забыть о том, что мы сами только что создали этот файл и исходить из того, что перед нами файл в 
 неизвестной кодировке. Задача: открыть этот файл БЕЗ ОШИБОК вне зависимости от того, в какой кодировке он был создан.
 """
+
+from chardet import detect
+import time
+
+list_6 = ['сетевое программирование', 'сокет', 'декоратор']
+
+
+def write_read_file(data):
+    f = open(r'test_file.txt', 'w', encoding='utf-8')
+    now = time.strftime('%d.%m.%Y %H:%M')
+    f.write(now + '\n')
+    for itm, el in enumerate(data, start=1):
+        f.write(str(itm) + '\t' + el + '\n')
+    f.close()
+
+    with open('test_file.txt', 'rb') as f:
+        content = f.read()
+        encoding = detect(content)['encoding']
+        print('encoding: ', encoding)
+        content = content.decode(encoding=encoding, errors='replace')
+        print(content)
+
+
+# write_read_file(list_6)
