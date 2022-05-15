@@ -22,7 +22,6 @@ def string_checker(str_1, str_2):
 
 # string_checker(strings_list, strings_list_unicode)
 
-
 """
 2. Каждое из слов «class», «function», «method» записать в байтовом типе. Сделать это необходимо в автоматическом, а не 
 ручном режиме, с помощью добавления литеры b к текстовому значению, (т.е. ни в коем случае не используя методы encode, 
@@ -58,18 +57,34 @@ def check_str_to_bytes(*args):
 
 # check_str_to_bytes()
 
-
 """
 4. Преобразовать слова «разработка», «администрирование», «protocol», «standard» из строкового представления в 
 байтовое и выполнить обратное преобразование (используя методы encode и decode).
 """
 
+list_4 = ['разработка', 'администрирование', 'protocol', 'standard']
+
+
+def list_encode_decode(data):
+    def list_encode(elem):
+        return str(elem).encode('utf-8')
+    encoded_list = (list(map(list_encode, data)))
+
+    def list_decode(elem):
+        return elem.decode('utf-8')
+    decoded_list = (list(map(list_decode, encoded_list)))
+
+    print(f'Encoding list - {encoded_list}')
+    print(f'Decoding list - {decoded_list}')
+
+
+# list_encode_decode(input('type text with spaces: ').split())
+# list_encode_decode(list_4)
 
 """
 5. Написать код, который выполняет пинг веб-ресурсов yandex.ru, youtube.com и преобразовывает результат из байтовового 
 типа данных в строковый без ошибок для любой кодировки операционной системы.
 """
-
 
 """
 6. Создать текстовый файл test_file.txt, заполнить его тремя строками: «сетевое программирование», «сокет», 
