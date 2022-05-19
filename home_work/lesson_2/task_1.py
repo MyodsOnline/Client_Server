@@ -53,4 +53,4 @@ def write_to_csv(file_name, sources):
         f_writer.writerows(data_os_list)
 
 
-write_to_csv('task_1.csv', sources)
+write_to_csv('data/task_1.csv', sources)
