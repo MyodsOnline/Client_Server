@@ -4,8 +4,8 @@ import time
 import sys
 
 from common.utils import get_message, send_message
-from common.variables import DEFAULT_PORT, DEFAULT_IP_ADDRESS, MAX_CONNECTIONS, MAX_PACKAGE_LENGTH, ENCODING, ACTION, \
-    TIME, USER, ACCOUNT_NAME, PRESENCE, RESPONSE, ERROR, USERNAME_DB
+from common.variables import DEFAULT_PORT, DEFAULT_IP_ADDRESS, ACTION, \
+    TIME, USER, ACCOUNT_NAME, PRESENCE, RESPONSE, ERROR
 
 
 def create_presence_message(account_name='Guest'):

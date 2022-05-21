@@ -3,7 +3,7 @@ import json
 import sys
 
 from common.utils import get_message, send_message
-from common.variables import DEFAULT_PORT, DEFAULT_IP_ADDRESS, MAX_CONNECTIONS, MAX_PACKAGE_LENGTH, ENCODING, ACTION, \
+from common.variables import DEFAULT_PORT, MAX_CONNECTIONS, ACTION, \
     TIME, USER, ACCOUNT_NAME, PRESENCE, RESPONSE, ERROR, USERNAME_DB
 
 
