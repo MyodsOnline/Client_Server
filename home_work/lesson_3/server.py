@@ -1,6 +1,5 @@
 import socket
 import json
-import time
 import sys
 
 from common.utils import get_message, send_message
@@ -9,10 +8,11 @@ from common.variables import DEFAULT_PORT, DEFAULT_IP_ADDRESS, MAX_CONNECTIONS, 
 
 
 def process_client_message(message):
-    if ACTION in message[ACTION] == PRESENCE \
+    if ACTION in message \
+            and message[ACTION] == PRESENCE \
             and TIME in message \
             and USER in message \
-            and message[USER][ACCOUNT_NAME] == 'Guest':
+            and message[USER][ACCOUNT_NAME] in USERNAME_DB:
         return {RESPONSE: 200}
     return {
         RESPONSE: 400,
@@ -48,6 +48,7 @@ def main():
     transport.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     transport.bind((listen_address, listen_port))
     transport.listen(MAX_CONNECTIONS)
+    print('waiting.........')
 
     while True:
         client_socket, client_address = transport.accept()
