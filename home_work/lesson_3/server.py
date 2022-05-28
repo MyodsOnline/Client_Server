@@ -16,7 +16,7 @@ def process_client_message(message):
         return {RESPONSE: 200}
     return {
         RESPONSE: 400,
-        ERROR: 'Bad request from here'
+        ERROR: 'Bad request'
     }
 
 
