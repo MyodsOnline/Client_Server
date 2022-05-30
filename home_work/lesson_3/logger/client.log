@@ -1,0 +1,21 @@
+2022-05-30 11:50:58,192  CRITICAL  client_logger  Критическая ошибка
+2022-05-30 11:50:58,192  ERROR     client_logger  Ошибка
+2022-05-30 11:50:58,192  DEBUG     client_logger  Отладочное сообщение
+2022-05-30 11:50:58,192  INFO      client_logger  Информационное сообщение
+2022-05-30 12:00:01,609  DEBUG     client      Message presence for Guest
+2022-05-30 12:00:01,609  DEBUG     client      Message instance {'response': 200}
+2022-05-30 12:00:43,665  DEBUG     client      Message presence for user: Guest
+2022-05-30 12:00:43,666  DEBUG     client      Message instance {'response': 200}
+2022-05-30 12:09:26,737  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-05-30 12:09:26,737  DEBUG     client      Message "presence" for user: Guest
+2022-05-30 12:09:26,738  DEBUG     client      Message instance {'response': 200}
+2022-05-30 12:09:26,738  INFO      client      Response from server accepted 200: OK
+2022-05-30 12:30:13,242  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-05-30 12:30:43,267  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-05-30 12:30:43,267  DEBUG     client      Message "presence" for user: Guest
+2022-05-30 12:30:43,268  DEBUG     client      Message instance {'response': 200}
+2022-05-30 12:30:43,268  INFO      client      Response from server accepted 200: OK
+2022-05-30 12:30:54,416  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-05-30 12:30:54,417  DEBUG     client      Message "presence" for user: Guest
+2022-05-30 12:30:54,417  DEBUG     client      Message instance {'response': 200}
+2022-05-30 12:30:54,417  INFO      client      Response from server accepted 200: OK

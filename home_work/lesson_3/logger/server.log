@@ -1,0 +1,10 @@
+2022-05-30 12:30:43,267  INFO      server      Connection with ('127.0.0.1', 62435) established.
+2022-05-30 12:30:43,268  DEBUG     server      Message "{'action': 'presence', 'time': 1653903043.267735, 'user': {'account_name': 'Guest'}}" received.
+2022-05-30 12:30:43,268  DEBUG     server      Message instance from client: {'action': 'presence', 'time': 1653903043.267735, 'user': {'account_name': 'Guest'}}
+2022-05-30 12:30:43,268  DEBUG     server      Response to client: {'response': 200}
+2022-05-30 12:30:43,268  DEBUG     server      Connection to client: ('127.0.0.1', 62435) been closed.
+2022-05-30 12:30:54,417  INFO      server      Connection with ('127.0.0.1', 62436) established.
+2022-05-30 12:30:54,417  DEBUG     server      Message "{'action': 'presence', 'time': 1653903054.417114, 'user': {'account_name': 'Guest'}}" received.
+2022-05-30 12:30:54,417  DEBUG     server      Message instance from client: {'action': 'presence', 'time': 1653903054.417114, 'user': {'account_name': 'Guest'}}
+2022-05-30 12:30:54,417  DEBUG     server      Response to client: {'response': 200}
+2022-05-30 12:30:54,417  DEBUG     server      Connection to client: ('127.0.0.1', 62436) been closed.
