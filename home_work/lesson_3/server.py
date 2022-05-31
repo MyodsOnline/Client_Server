@@ -1,13 +1,18 @@
 import socket
 import json
 import sys
+import logging
 
 from common.utils import get_message, send_message
 from common.variables import DEFAULT_PORT, MAX_CONNECTIONS, ACTION, \
     TIME, USER, ACCOUNT_NAME, PRESENCE, RESPONSE, ERROR, USERNAME_DB
+import logger.server_logger
+
+SERVER_LOGGER = logging.getLogger('app.server')
 
 
 def process_client_message(message):
+    SERVER_LOGGER.debug(f'Message instance from client: {message}')
     if ACTION in message \
             and message[ACTION] == PRESENCE \
             and TIME in message \
@@ -29,10 +34,10 @@ def main():
         else:
             listen_port = DEFAULT_PORT
     except IndexError:
-        print('missing port number')
+        SERVER_LOGGER.critical(f'Missing port number')
         sys.exit(1)
     except ValueError:
-        print('wrong port number')
+        SERVER_LOGGER.critical(f'Wrong port number')
         sys.exit(1)
 
     try:
@@ -41,7 +46,7 @@ def main():
         else:
             listen_address = ''
     except ValueError:
-        print('missing IP address')
+        SERVER_LOGGER.critical(f'missing IP address')
         sys.exit(1)
 
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -52,14 +57,17 @@ def main():
 
     while True:
         client_socket, client_address = transport.accept()
+        SERVER_LOGGER.info(f'Connection with {client_address} established.')
         try:
             message_client = get_message(client_socket)
-            print(message_client)
+            SERVER_LOGGER.debug(f'Message "{message_client}" received.')
             server_response = process_client_message(message_client)
+            SERVER_LOGGER.debug(f'Response to client: {server_response}')
             send_message(client_socket, server_response)
+            SERVER_LOGGER.debug(f'Connection to client: {client_address} been closed.')
             client_socket.close()
         except (ValueError, json.JSONDecodeError):
-            print('some kind of error in the client message')
+            SERVER_LOGGER.error('some kind of error in the client message')
             client_socket.close()
 
 
