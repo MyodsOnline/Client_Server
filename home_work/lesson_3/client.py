@@ -8,10 +8,12 @@ from common.variables import DEFAULT_PORT, DEFAULT_IP_ADDRESS, ACTION, \
     TIME, USER, ACCOUNT_NAME, PRESENCE, RESPONSE, ERROR
 import logger.client_logger
 import logging
+from decos import log
 
 LOG = logging.getLogger('app.client')
 
 
+@log
 def create_presence_message(account_name='Guest'):
     output_message = {
         ACTION: PRESENCE,

@@ -1,8 +1,13 @@
 import json
+import sys
 
 from .variables import MAX_PACKAGE_LENGTH, ENCODING
 
+sys.path.append('../')
+from decos import log
 
+
+@log
 def get_message(client):
     encoded_response = client.recv(MAX_PACKAGE_LENGTH)
     if isinstance(encoded_response, bytes):
@@ -16,6 +21,7 @@ def get_message(client):
     raise ValueError
 
 
+@log
 def send_message(sock, message):
     if not isinstance(message, dict):
         raise TypeError
