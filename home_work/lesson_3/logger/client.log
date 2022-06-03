@@ -19,3 +19,77 @@
 2022-05-30 12:30:54,417  DEBUG     client      Message "presence" for user: Guest
 2022-05-30 12:30:54,417  DEBUG     client      Message instance {'response': 200}
 2022-05-30 12:30:54,417  INFO      client      Response from server accepted 200: OK
+2022-06-01 15:28:21,519  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-06-01 15:28:21,519  DEBUG     client      Message "presence" for user: Guest
+2022-06-01 15:28:21,520  DEBUG     decos       The "send_message" function with parameters "(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54052), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1654086501.5195572, 'user': {'account_name': 'Guest'}}), {}" is called.Calling from module "common.utils".Calling from function "main()".
+2022-06-01 15:28:21,520  DEBUG     decos       The "get_message" function with parameters "(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54052), raddr=('127.0.0.1', 7777)>,), {}" is called.Calling from module "common.utils".Calling from function "main()".
+2022-06-01 15:28:21,520  DEBUG     client      Message instance {'response': 200}
+2022-06-01 15:28:21,520  INFO      client      Response from server accepted 200: OK
+2022-06-01 15:29:37,320  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-06-01 15:29:37,320  DEBUG     client      Message "presence" for user: Guest
+2022-06-01 15:29:37,320  DEBUG     decos       The "send_message" function with parameters "(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54053), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1654086577.3204129, 'user': {'account_name': 'Guest'}}), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:29:37,321  DEBUG     decos       The "get_message" function with parameters "(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54053), raddr=('127.0.0.1', 7777)>,), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:29:37,321  DEBUG     client      Message instance {'response': 200}
+2022-06-01 15:29:37,321  INFO      client      Response from server accepted 200: OK
+2022-06-01 15:29:51,125  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-06-01 15:29:51,125  DEBUG     client      Message "presence" for user: Guest
+2022-06-01 15:29:51,125  DEBUG     decos       The "send_message" function with parameters "(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54054), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1654086591.125449, 'user': {'account_name': 'Guest'}}), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:29:51,125  DEBUG     decos       The "get_message" function with parameters "(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54054), raddr=('127.0.0.1', 7777)>,), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:29:51,126  DEBUG     client      Message instance {'response': 200}
+2022-06-01 15:29:51,126  INFO      client      Response from server accepted 200: OK
+2022-06-01 15:32:35,624  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-06-01 15:32:35,624  DEBUG     client      Message "presence" for user: Guest
+2022-06-01 15:32:35,624  DEBUG     decos       
+The "send_message" function with parameters 
+"(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54056), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1654086755.624436, 'user': {'account_name': 'Guest'}}), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:32:35,625  DEBUG     decos       
+The "get_message" function with parameters 
+"(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54056), raddr=('127.0.0.1', 7777)>,), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:32:35,625  DEBUG     client      Message instance {'response': 200}
+2022-06-01 15:32:35,625  INFO      client      Response from server accepted 200: OK
+2022-06-01 15:37:31,842  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-06-01 15:37:31,843  DEBUG     client      Message "presence" for user: Guest
+2022-06-01 15:37:31,843  DEBUG     decos       
+The "send_message" function with parameters 
+"(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54059), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1654087051.8430111, 'user': {'account_name': 'Guest'}}), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:37:31,843  DEBUG     decos       
+The "get_message" function with parameters 
+"(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54059), raddr=('127.0.0.1', 7777)>,), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:37:31,843  DEBUG     client      Message instance {'response': 200}
+2022-06-01 15:37:31,843  INFO      client      Response from server accepted 200: OK
+__________________________
+2022-06-01 15:56:12,101  INFO      client      Started client on server 127.0.0.1 on 7777 port.
+2022-06-01 15:56:12,101  DEBUG     client      Message "presence" for user: Guest
+2022-06-01 15:56:12,101  DEBUG     decos       
+The "create_presence_message" function with parameters 
+"(), {}" is called.
+Calling from module "__main__".
+Calling from function "main()".
+2022-06-01 15:56:12,101  DEBUG     decos       
+The "send_message" function with parameters 
+"(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54115), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1654088172.101411, 'user': {'account_name': 'Guest'}}), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:56:12,102  DEBUG     decos       
+The "get_message" function with parameters 
+"(<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54115), raddr=('127.0.0.1', 7777)>,), {}" is called.
+Calling from module "common.utils".
+Calling from function "main()".
+2022-06-01 15:56:12,102  DEBUG     client      Message instance {'response': 200}
+2022-06-01 15:56:12,102  INFO      client      Response from server accepted 200: OK

@@ -7,10 +7,12 @@ from common.utils import get_message, send_message
 from common.variables import DEFAULT_PORT, MAX_CONNECTIONS, ACTION, \
     TIME, USER, ACCOUNT_NAME, PRESENCE, RESPONSE, ERROR, USERNAME_DB
 import logger.server_logger
+from decos import log
 
 SERVER_LOGGER = logging.getLogger('app.server')
 
 
+@log
 def process_client_message(message):
     SERVER_LOGGER.debug(f'Message instance from client: {message}')
     if ACTION in message \
